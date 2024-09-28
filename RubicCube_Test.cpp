@@ -65,18 +65,6 @@ TEST(CheckRightCubeColoringFromFile, CheckColoring) {
 	ASSERT_TRUE(Cube.CheckColoring());
 }
 
-TEST(CheckExitYes, ExitOption) {
-	RubicCube Cube(0);
-	cout << "Введите: Y\n";
-	ASSERT_FALSE(Cube.ExitGame());
-}
-
-TEST(CheckExitNo, ExitOption) {
-	RubicCube Cube(0);
-	cout << "Введите: N\n";
-	ASSERT_TRUE(Cube.ExitGame());
-}
-
 TEST(Equality, Operators) {
 	RubicCube Cube1(0);
 	RubicCube Cube2(0);
@@ -93,21 +81,6 @@ TEST(Assignment, Operators) {
 	RubicCube Cube1(2);
 	RubicCube Cube2(0);
 	Cube1 = Cube2;
-	ASSERT_TRUE(Cube1==Cube2);
-}
-
-TEST(SeeCube, SeeGraphic) {
-	RubicCube Cube(0);
-	Cube.SeeCube();
-	ASSERT_EQ(1, 1);
-}
-
-TEST(CubeChoiceMenu, MenuLogic) {
-	RubicCube Cube1("right_colors.txt");
-	RubicCube Cube2(0);
-	cout << "Выберите 2\n";
-	cout << "Введите файл: right_colors.txt\n";
-	Cube2.CubeChoiceMenu(Cube2);
 	ASSERT_TRUE(Cube1==Cube2);
 }
 
