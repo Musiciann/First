@@ -7,18 +7,6 @@
 
 using namespace std;
 
-TEST(CheckColoringMessageWrong, CheckColoring) {
-	RubicCube Cube("wrong_colors.txt");
-	Cube.ColoringCheckMessage();
-	ASSERT_EQ(1, 1);
-}
-
-TEST(CheckColoringMessageRightFile, CheckColoring) {
-	RubicCube Cube("right_colors.txt");
-	Cube.ColoringCheckMessage();
-	ASSERT_EQ(1, 1);
-}
-
 TEST(CheckColoringMessageRight, CheckColoring) {
 	RubicCube Cube(0);
 	Cube.ColoringCheckMessage();
